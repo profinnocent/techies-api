@@ -4,10 +4,10 @@
 POST http://localhost/aptech/techies-api/api/register.php
 
 {
-    "firstname":"Prof1",
-    "lastname": "Onyeka",
-    "email":"prof1@gmail.com",
-    "password":"prof1000"
+    "firstname":"Prof2",
+    "lastname": "Bella",
+    "email":"prof2@gmail.com",
+    "password":"prof2000"
 }
 
 
