@@ -4,10 +4,10 @@
 POST http://localhost/aptech/techies-api/api/register.php
 
 {
-    "firstname":"Prof2",
-    "lastname": "Bella",
-    "email":"prof2@gmail.com",
-    "password":"prof2000"
+    "firstname":"Prof4",
+    "lastname": "Cain",
+    "email":"prof4@gmail.com",
+    "password":"prof4000"
 }
 
 
@@ -20,8 +20,8 @@ POST http://localhost/aptech/techies-api/api/register.php
 POST http://localhost/aptech/techies-api/api/login.php
 
 {
-    "email":"prof2@gmail.com",
-    "password":"prof2000"
+    "email":"prof4@gmail.com",
+    "password":"prof4000"
 }
 
 

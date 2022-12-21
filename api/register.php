@@ -25,6 +25,24 @@ $password = $data->password;
 
 $table_name = 'users';
 
+// Check if user email exists
+$email_query = "SELECT email FROM `users` WHERE email = ? LIMIT 0,1";
+
+$stmt2 = $conn->prepare($email_query);
+$stmt2->bindParam(1, $email);
+$stmt2->execute();
+$num = $stmt2->rowCount();
+
+if($num > 0){
+
+    http_response_code(401);
+    echo json_encode(['status'=>0, 'message'=>'User email already exists']);
+    exit;
+
+}
+
+
+
 $query = "INSERT INTO " . $table_name . "
                 SET firstname = :firstname,
                     lastname = :lastname,
