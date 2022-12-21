@@ -1,0 +1,34 @@
+###
+# POST 
+# REGISTER endpoint
+POST http://localhost/aptech/techies-api/api/register.php
+
+{
+    "firstname":"Prof1",
+    "lastname": "Onyeka",
+    "email":"prof1@gmail.com",
+    "password":"prof1000"
+}
+
+
+
+
+
+###
+# POST 
+# LOGIN endpoint
+POST http://localhost/aptech/techies-api/api/login.php
+
+{
+    "email":"prof2@gmail.com",
+    "password":"prof2000"
+}
+
+
+
+
+###
+# GET 
+# LOG OUT endpoint
+GET http://localhost/aptech/techies-api/api/logout.php
+
