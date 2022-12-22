@@ -13,7 +13,6 @@ POST http://localhost/aptech/techies-api/api/register.php
 
 
 
-
 ###
 # POST 
 # LOGIN endpoint
@@ -30,5 +29,12 @@ POST http://localhost/aptech/techies-api/api/login.php
 ###
 # GET 
 # LOG OUT endpoint
-GET http://localhost/aptech/techies-api/api/logout.php
+GET http://localhost/aptech/techies-api/api/logout.php HTTP/1.1
 
+
+
+
+###
+# GET 
+# LOG OUT endpoint
+GET http://localhost/aptech/techies-api/api/logout.php

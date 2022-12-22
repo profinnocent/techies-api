@@ -1,5 +1,6 @@
 <?php
 include_once './config/database.php';
+include_once './config/utilities.php';
 
 header("Access-Control-Allow-Origin: * ");
 header("Content-Type: application/json; charset=UTF-8");
@@ -18,10 +19,10 @@ $conn = $databaseService->getConnection();
 
 $data = json_decode(file_get_contents("php://input"));
 
-$firstName = $data->firstname;
-$lastName = $data->lastname;
-$email = $data->email;
-$password = $data->password;
+$firstName = cleanData($data->firstname);
+$lastName = cleanData($data->lastname);
+$email = cleanData($data->email);
+$password = cleanData($data->password);
 
 $table_name = 'users';
 
@@ -41,8 +42,7 @@ if($num > 0){
 
 }
 
-
-
+// Insert input data into table
 $query = "INSERT INTO " . $table_name . "
                 SET firstname = :firstname,
                     lastname = :lastname,
@@ -66,8 +66,9 @@ if($stmt->execute()){
     echo json_encode(array("message" => "User was successfully registered."));
 }
 else{
-    http_response_code(400);
 
+    http_response_code(400);
     echo json_encode(array("message" => "Unable to register the user."));
+    
 }
 ?>

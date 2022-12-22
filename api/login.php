@@ -16,8 +16,6 @@ $password = '';
 $databaseService = new DatabaseService();
 $conn = $databaseService->getConnection();
 
-
-
 $data = json_decode(file_get_contents("php://input"));
 
 $email = $data->email;
